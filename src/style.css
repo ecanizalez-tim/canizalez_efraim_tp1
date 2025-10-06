@@ -1,0 +1,156 @@
+/* ============================================
+   🎨 Thème Dune: Part Two — clair & sombre
+   Couleurs or/beige/noir, compatibles Bootstrap 5.3
+   ============================================ */
+
+/* ======= MODE CLAIR ======= */
+:root,
+[data-bs-theme="light"] {
+  --bs-primary: #E0C872;
+  --bs-primary-rgb: 224, 200, 114;
+  --bs-secondary: #8B7E66;
+  --bs-body-bg: #FFF8E7;
+  --bs-body-color: #2B2B2B;
+  --bs-link-color: var(--bs-primary);
+  --bs-link-hover-color: #cfb95f;
+  --bs-border-color: rgba(0, 0, 0, 0.1);
+
+  --bs-card-bg: #fff;
+  --bs-card-color: var(--bs-body-color);
+  --bs-accordion-bg: var(--bs-card-bg);
+  --bs-accordion-color: var(--bs-body-color);
+  --bs-accordion-btn-bg: var(--bs-accordion-bg);
+  --bs-accordion-btn-color: var(--bs-body-color);
+  --bs-accordion-border-color: var(--bs-border-color);
+
+  --bs-primary-bg-subtle: rgba(224,200,114,.15);
+  --bs-primary-border-subtle: rgba(224,200,114,.30);
+  --bs-accordion-active-bg: #f8f1d3;
+  --bs-accordion-active-color: var(--bs-body-color);
+}
+
+/* ======= MODE SOMBRE ======= */
+[data-bs-theme="dark"] {
+  --bs-primary: #E0C872;
+  --bs-primary-rgb: 224, 200, 114;
+  --bs-secondary: #b6a16a;
+  --bs-body-bg: #0e0e0e;
+  --bs-body-color: #f3f3e6;
+  --bs-link-color: #e0c872;
+  --bs-link-hover-color: #fff2b0;
+  --bs-border-color: #2a2a2a;
+
+  --bs-card-bg: #121212;
+  --bs-card-color: var(--bs-body-color);
+  --bs-accordion-bg: #111;
+  --bs-accordion-color: var(--bs-body-color);
+  --bs-accordion-btn-bg: #1a1a1a;
+  --bs-accordion-btn-color: var(--bs-body-color);
+  --bs-accordion-border-color: #333;
+
+  --bs-primary-bg-subtle: rgba(224,200,114,.16);
+  --bs-primary-border-subtle: rgba(224,200,114,.35);
+  --bs-accordion-active-bg: #141414;
+  --bs-accordion-active-color: var(--bs-body-color);
+}
+
+/* ======= BASE + FADE GLOBAL ======= */
+html.theme-fade, html.theme-fade * {
+  transition: background-color .45s ease, color .45s ease, border-color .45s ease, fill .45s ease !important;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: "Playfair Display", serif;
+  letter-spacing: .2px;
+  color: var(--bs-body-color);
+}
+
+/* ======= NAVBAR ======= */
+.navbar {
+  background-color: var(--bs-body-bg) !important;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.navbar-brand { color: var(--bs-body-color) !important; }
+.navbar-brand:hover { color: var(--bs-primary) !important; }
+
+/* ======= BOUTONS ======= */
+.btn-primary {
+  --bs-btn-color: #1f1f1f;
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #cfb95f;
+  --bs-btn-hover-border-color: #cfb95f;
+  --bs-btn-active-bg: #c2ab56;
+  --bs-btn-active-border-color: #c2ab56;
+}
+.btn-outline-primary {
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: #1f1f1f;
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-active-color: #1f1f1f;
+  --bs-btn-active-bg: #cfb95f;
+  --bs-btn-active-border-color: #cfb95f;
+}
+[data-bs-theme="dark"] .btn-outline-primary {
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+}
+.btn:hover { transform: translateY(-2px); }
+
+/* ======= BADGES ======= */
+.badge.text-bg-primary {
+  --bs-badge-color: #1f1f1f;
+  --bs-badge-bg: var(--bs-primary);
+}
+
+/* ======= LIENS ======= */
+a, a:visited { color: var(--bs-link-color); text-decoration: none; }
+a:hover { color: var(--bs-link-hover-color); text-decoration: underline; }
+
+/* ======= HERO ======= */
+.hero { background: center/cover no-repeat url("../assets/dune-hero.jpg"); border-radius: 1rem; }
+
+/* ======= CARTES ======= */
+.card { background-color: var(--bs-card-bg); color: var(--bs-card-color); border: 1px solid var(--bs-border-color); }
+
+/* ======= ACCORDION ======= */
+.accordion-item { background-color: var(--bs-accordion-bg); border: 1px solid var(--bs-accordion-border-color); }
+.accordion-button { background-color: var(--bs-accordion-btn-bg); color: var(--bs-body-color) !important; }
+.accordion-button:not(.collapsed) { background-color: var(--bs-accordion-active-bg); color: var(--bs-body-color) !important; border-color: var(--bs-accordion-border-color); }
+.accordion-body { background-color: var(--bs-accordion-bg); color: var(--bs-accordion-color); }
+.accordion-button:focus { border-color: var(--bs-primary-border-subtle); box-shadow: 0 0 0 .2rem rgba(224,200,114,.25); }
+
+/* Chevrons dorés */
+[data-bs-theme="light"], [data-bs-theme="dark"]{
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23E0C872'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/%3e%3c/svg%3e");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23E0C872'%3e%3cpath fill-rule='evenodd' d='M1.646 11.354a.5.5 0 0 0 .708 0L8 5.707l5.646 5.647a.5.5 0 0 0 .708-.708l-6-6a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 0 .708'/%3e%3c/svg%3e");
+}
+
+/* ======= TEXTE ======= */
+.text-primary { color: var(--bs-primary) !important; }
+.prose p { line-height: 1.9; color: var(--bs-body-color); }
+
+/* ======= FOOTER ======= */
+footer { color: var(--bs-body-color); border-top: 1px solid var(--bs-border-color); padding: 1rem 0; text-align: center; font-size: 0.9rem; }
+
+/* ======= BOUTON DE THEME ======= */
+#themeToggle {
+  background: none;
+  border: none;
+  color: var(--bs-primary);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+#themeToggle:hover { transform: rotate(15deg); color: var(--bs-link-hover-color); }
